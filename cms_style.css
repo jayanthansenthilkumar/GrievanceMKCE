@@ -1,0 +1,115 @@
+        /*star rating*/
+        .stars span {
+            font-size: 2rem;
+            cursor: pointer;
+            color: gray;
+            /* Default color for unlit stars */
+            transition: color 0.3s;
+        }
+
+        .stars span.highlighted {
+            color: gold;
+            /* Color for lit stars */
+        }
+
+        /*date filtter form in record's*/
+        .data_filter_form {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            background: white;
+            /* Violet-Blue Gradient */
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 100%;
+            font-family: Arial, sans-serif;
+            flex-wrap: wrap;
+        }
+
+        .data_filter_form div {
+            display: flex;
+            align-items: center;
+            margin: 0 10px;
+        }
+
+        .data_filter_form label {
+            font-weight: bold;
+            font-size: 14px;
+            color: #fff;
+            /* White text for contrast */
+            margin-right: 10px;
+        }
+
+        .data_filter_form input {
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+            color: #333;
+            width: 200px;
+        }
+
+        .data_filter_form button {
+            padding: 10px 25px;
+            background: #4a00e0;
+            /* Deep Violet */
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .data_filter_form button:hover {
+            background: #6a11cb;
+            /* Slightly lighter violet */
+        }
+
+        @media (max-width: 768px) {
+            .data_filter_form {
+                flex-direction: column;
+                align-items: stretch;
+                text-align: center;
+            }
+
+            .data_filter_form div {
+                margin-bottom: 10px;
+            }
+        }
+
+        /* Ensure the dropdown is positioned relative to the table cell */
+td .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Style the dropdown menu */
+td .dropdown-menu {
+    position: absolute;
+    top: 100%; /* Aligns below the button */
+    left: 0; /* Aligns with the start of the table */
+    width: max-content; /* Adjust width to content */
+    min-width: 150px; /* Set a minimum width */
+    z-index: 1050; /* Ensures it appears above other elements */
+    background-color: #fff; /* White background */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Style dropdown items */
+td .dropdown-menu .dropdown-item {
+    padding: 8px 15px;
+    color: #333;
+    text-align: center;
+    transition: background 0.3s ease;
+}
+
+/* Hover effect */
+td .dropdown-menu .dropdown-item:hover {
+    background-color: #f8f9fa;
+}

@@ -1,0 +1,650 @@
+.custom-tabs {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 5px;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+}
+
+.nav-tabs {
+    border: none;
+    gap: 10px;
+    padding: 6px;
+    background: #f8f9fd;
+    border-radius: 12px;
+}
+
+.nav-link {
+    border: none !important;
+    border-radius: 10px !important;
+    padding: 10px 20px !important;
+    /* font-weight: 600 !important; */
+    font-size: 0.95rem;
+    letter-spacing: 0.3px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    z-index: 1;
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    z-index: -1;
+    transform: translateY(100%);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-link:hover::before {
+    transform: translateY(0);
+}
+
+.nav-link.active {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Styling for Add Bus Tab */
+#add-bus-tab {
+    background: linear-gradient(135deg, #FF6A00, #FFB700);
+    color: #fff;
+}
+
+#add-bus-tab:not(.active) {
+    background: #fff;
+    color: #FF6A00;
+}
+
+#add-bus-tab:hover:not(.active) {
+    background: linear-gradient(135deg, #FF6A00, #FFB700);
+    color: #fff;
+}
+
+/* Styling for Edit Bus Tab */
+#edit-bus-tab {
+    background: linear-gradient(135deg, #4A90E2, #50E3C2);
+    color: #fff;
+}
+
+#edit-bus-tab:not(.active) {
+    background: #fff;
+    color: #4A90E2;
+}
+
+#edit-bus-tab:hover:not(.active) {
+    background: linear-gradient(135deg, #4A90E2, #50E3C2);
+    color: #fff;
+}
+
+/* Styling for View Bus Tab */
+#view-bus-tab {
+    background: linear-gradient(135deg, #7ED321, #D1F2A5);
+    color: #fff;
+}
+
+#view-bus-tab:not(.active) {
+    background: #fff;
+    color: #7ED321;
+}
+
+#view-bus-tab:hover:not(.active) {
+    background: linear-gradient(135deg, #7ED321, #D1F2A5);
+    color: #fff;
+}
+
+/* Styling for Delete Bus Tab */
+#delete-bus-tab {
+    background: linear-gradient(135deg, #E74C3C, #F1948A);
+    color: #fff;
+}
+
+#delete-bus-tab:not(.active) {
+    background: #fff;
+    color: #E74C3C;
+}
+
+#delete-bus-tab:hover:not(.active) {
+    background: linear-gradient(135deg, #E74C3C, #F1948A);
+    color: #fff;
+}
+
+/* Styling for Schedule Bus Tab */
+#schedule-bus-tab {
+    background: linear-gradient(135deg, #F39C12, #F7DC6F);
+    color: #fff;
+}
+
+#schedule-bus-tab:not(.active) {
+    background: #fff;
+    color: #F39C12;
+}
+
+#schedule-bus-tab:hover:not(.active) {
+    background: linear-gradient(135deg, #F39C12, #F7DC6F);
+    color: #fff;
+}
+
+/* Styling for Route Bus Tab */
+#route-bus-tab {
+    background: linear-gradient(135deg, #9B59B6, #D7BDE2);
+    color: #fff;
+}
+
+#route-bus-tab:not(.active) {
+    background: #fff;
+    color: #9B59B6;
+}
+
+#route-bus-tab:hover:not(.active) {
+    background: linear-gradient(135deg, #9B59B6, #D7BDE2);
+    color: #fff;
+}
+
+/* Styling for Report Bus Tab */
+#report-bus-tab {
+    background: linear-gradient(135deg, #16A085, #48C9B0);
+    color: #fff;
+}
+
+#report-bus-tab:not(.active) {
+    background: #fff;
+    color: #16A085;
+}
+
+#report-bus-tab:hover:not(.active) {
+    background: linear-gradient(135deg, #16A085, #48C9B0);
+    color: #fff;
+}
+
+/* Styling for Settings Bus Tab */
+#settings-bus-tab {
+    background: linear-gradient(135deg, #D35400, #F39C12);
+    color: #fff;
+}
+
+#settings-bus-tab:not(.active) {
+    background: #fff;
+    color: #D35400;
+}
+
+#settings-bus-tab:hover:not(.active) {
+    background: linear-gradient(135deg, #D35400, #F39C12);
+    color: #fff;
+}
+
+/* Styling for Balance Bus Tab */
+#balance-bus-tab {
+    background: linear-gradient(135deg, #2980B9, #AED6F1);
+    color: #fff;
+}
+
+#balance-bus-tab:not(.active) {
+    background: #fff;
+    color: #2980B9;
+}
+
+#balance-bus-tab:hover:not(.active) {
+    background: linear-gradient(135deg, #2980B9, #AED6F1);
+    color: #fff;
+}
+
+/* Styling for Revenue Bus Tab */
+#revenue-bus-tab {
+    background: linear-gradient(135deg, #C0392B, #F1948A);
+    color: #fff;
+}
+
+#revenue-bus-tab:not(.active) {
+    background: #fff;
+    color: #C0392B;
+}
+
+#revenue-bus-tab:hover:not(.active) {
+    background: linear-gradient(135deg, #C0392B, #F1948A);
+    color: #fff;
+}
+
+/* Styling for Maintenance Bus Tab */
+#maintenance-bus-tab {
+    background: linear-gradient(135deg, #27AE60, #7DCEA0);
+    color: #fff;
+}
+
+#maintenance-bus-tab:not(.active) {
+    background: #fff;
+    color: #27AE60;
+}
+
+#maintenance-bus-tab:hover:not(.active) {
+    background: linear-gradient(135deg, #27AE60, #7DCEA0);
+    color: #fff;
+}
+
+/* Styling for Staff Bus Tab */
+#staff-bus-tab {
+    background: linear-gradient(135deg, #F1C40F, #F9E79F);
+    color: #fff;
+}
+
+#staff-bus-tab:not(.active) {
+    background: #fff;
+    color: #F1C40F;
+}
+
+#staff-bus-tab:hover:not(.active) {
+    background: linear-gradient(135deg, #F1C40F, #F9E79F);
+    color: #fff;
+}
+
+/* Drivers Bus Tab Styling */
+#drivers-bus-tab {
+    background: linear-gradient(135deg, #B0C4DE, #4682B4);
+    color: #fff;
+}
+
+#drivers-bus-tab:not(.active) {
+    background: #fff;
+    color: #B0C4DE;
+}
+
+#drivers-bus-tab:hover:not(.active) {
+    background: linear-gradient(135deg, #B0C4DE, #4682B4);
+    color: #fff;
+}
+
+/* Vehicle Info Tab Styling */
+#vehicle-info-bus-tab {
+    background: linear-gradient(135deg, #8B4513, #D2691E);
+    color: #fff;
+}
+
+#vehicle-info-bus-tab:not(.active) {
+    background: #fff;
+    color: #8B4513;
+}
+
+#vehicle-info-bus-tab:hover:not(.active) {
+    background: linear-gradient(135deg, #8B4513, #D2691E);
+    color: #fff;
+}
+
+/* Route Map Tab Styling */
+#route-map-bus-tab {
+    background: linear-gradient(135deg, #A52A2A, #D2B48C);
+    color: #fff;
+}
+
+#route-map-bus-tab:not(.active) {
+    background: #fff;
+    color: #A52A2A;
+}
+
+#route-map-bus-tab:hover:not(.active) {
+    background: linear-gradient(135deg, #A52A2A, #D2B48C);
+    color: #fff;
+}
+
+/* User Feedback Tab Styling */
+#user-feedback-bus-tab {
+    background: linear-gradient(135deg, #32CD32, #98FB98);
+    color: #fff;
+}
+
+#user-feedback-bus-tab:not(.active) {
+    background: #fff;
+    color: #32CD32;
+}
+
+#user-feedback-bus-tab:hover:not(.active) {
+    background: linear-gradient(135deg, #32CD32, #98FB98);
+    color: #fff;
+}
+
+/* Emergency Contact Tab Styling */
+#emergency-contact-bus-tab {
+    background: linear-gradient(135deg, #FF1493, #FF69B4);
+    color: #fff;
+}
+
+#emergency-contact-bus-tab:not(.active) {
+    background: #fff;
+    color: #FF1493;
+}
+
+#emergency-contact-bus-tab:hover:not(.active) {
+    background: linear-gradient(135deg, #FF1493, #FF69B4);
+    color: #fff;
+}
+
+/* Fleet Management Tab Styling */
+#fleet-management-bus-tab {
+    background: linear-gradient(135deg, #5F9EA0, #4682B4);
+    color: #fff;
+}
+
+#fleet-management-bus-tab:not(.active) {
+    background: #fff;
+    color: #5F9EA0;
+}
+
+#fleet-management-bus-tab:hover:not(.active) {
+    background: linear-gradient(135deg, #5F9EA0, #4682B4);
+    color: #fff;
+}
+
+/* Maintenance Schedule Tab Styling */
+#maintenance-schedule-bus-tab {
+    background: linear-gradient(135deg, #9932CC, #8A2BE2);
+    color: #fff;
+}
+
+#maintenance-schedule-bus-tab:not(.active) {
+    background: #fff;
+    color: #9932CC;
+}
+
+#maintenance-schedule-bus-tab:hover:not(.active) {
+    background: linear-gradient(135deg, #9932CC, #8A2BE2);
+    color: #fff;
+}
+
+/* Insurance Tab Styling */
+#insurance-bus-tab {
+    background: linear-gradient(135deg, #DAA520, #B8860B);
+    color: #fff;
+}
+
+#insurance-bus-tab:not(.active) {
+    background: #fff;
+    color: #DAA520;
+}
+
+#insurance-bus-tab:hover:not(.active) {
+    background: linear-gradient(135deg, #DAA520, #B8860B);
+    color: #fff;
+}
+
+/* Trip Record Tab Styling */
+#trip-record-bus-tab {
+    background: linear-gradient(135deg, #DC143C, #FF4500);
+    color: #fff;
+}
+
+#trip-record-bus-tab:not(.active) {
+    background: #fff;
+    color: #DC143C;
+}
+
+#trip-record-bus-tab:hover:not(.active) {
+    background: linear-gradient(135deg, #DC143C, #FF4500);
+    color: #fff;
+}
+
+/* Fuel Consumption Tab Styling */
+#fuel-consumption-bus-tab {
+    background: linear-gradient(135deg, #008B8B, #20B2AA);
+    color: #fff;
+}
+
+#fuel-consumption-bus-tab:not(.active) {
+    background: #fff;
+    color: #008B8B;
+}
+
+#fuel-consumption-bus-tab:hover:not(.active) {
+    background: linear-gradient(135deg, #008B8B, #20B2AA);
+    color: #fff;
+}
+
+/* Route Planning Tab Styling */
+#route-planning-bus-tab {
+    background: linear-gradient(135deg, #FF6347, #FF7F50);
+    color: #fff;
+}
+
+#route-planning-bus-tab:not(.active) {
+    background: #fff;
+    color: #FF6347;
+}
+
+#route-planning-bus-tab:hover:not(.active) {
+    background: linear-gradient(135deg, #FF6347, #FF7F50);
+    color: #fff;
+}
+
+/* New Bus Tab Styling */
+#new-bus-tab {
+    background: linear-gradient(135deg, #D16BA5, #F9A8D4);
+    color: #fff;
+}
+
+#new-bus-tab:not(.active) {
+    background: #fff;
+    color: #D16BA5;
+}
+
+#new-bus-tab:hover:not(.active) {
+    background: linear-gradient(135deg, #D16BA5, #F9A8D4);
+    color: #fff;
+}
+
+/* Update Bus Tab Styling */
+#update-bus-tab {
+    background: linear-gradient(135deg, #1E90FF, #87CEFA);
+    color: #fff;
+}
+
+#update-bus-tab:not(.active) {
+    background: #fff;
+    color: #1E90FF;
+}
+
+#update-bus-tab:hover:not(.active) {
+    background: linear-gradient(135deg, #1E90FF, #87CEFA);
+    color: #fff;
+}
+
+/* Manage Bus Tab Styling */
+#manage-bus-tab {
+    background: linear-gradient(135deg, #228B22, #7CFC00);
+    color: #fff;
+}
+
+#manage-bus-tab:not(.active) {
+    background: #fff;
+    color: #228B22;
+}
+
+#manage-bus-tab:hover:not(.active) {
+    background: linear-gradient(135deg, #228B22, #7CFC00);
+    color: #fff;
+}
+
+/* Bus Overview Tab Styling */
+#overview-bus-tab {
+    background: linear-gradient(135deg, #FF4500, #FF6347);
+    color: #fff;
+}
+
+#overview-bus-tab:not(.active) {
+    background: #fff;
+    color: #FF4500;
+}
+
+#overview-bus-tab:hover:not(.active) {
+    background: linear-gradient(135deg, #FF4500, #FF6347);
+    color: #fff;
+}
+
+/* Track Bus Tab Styling */
+#track-bus-tab {
+    background: linear-gradient(135deg, #8A2BE2, #9370DB);
+    color: #fff;
+}
+
+#track-bus-tab:not(.active) {
+    background: #fff;
+    color: #8A2BE2;
+}
+
+#track-bus-tab:hover:not(.active) {
+    background: linear-gradient(135deg, #8A2BE2, #9370DB);
+    color: #fff;
+}
+
+/* Bus History Tab Styling */
+#history-bus-tab {
+    background: linear-gradient(135deg, #20B2AA, #3CB371);
+    color: #fff;
+}
+
+#history-bus-tab:not(.active) {
+    background: #fff;
+    color: #20B2AA;
+}
+
+#history-bus-tab:hover:not(.active) {
+    background: linear-gradient(135deg, #20B2AA, #3CB371);
+    color: #fff;
+}
+
+/* Bus Logs Tab Styling */
+#bus-logs-tab {
+    background: linear-gradient(135deg, #FF1493, #FF69B4);
+    color: #fff;
+}
+
+#bus-logs-tab:not(.active) {
+    background: #fff;
+    color: #FF1493;
+}
+
+#bus-logs-tab:hover:not(.active) {
+    background: linear-gradient(135deg, #FF1493, #FF69B4);
+    color: #fff;
+}
+
+/* Maintenance Record Tab Styling */
+#maintenance-record-bus-tab {
+    background: linear-gradient(135deg, #FFD700, #FF8C00);
+    color: #fff;
+}
+
+#maintenance-record-bus-tab:not(.active) {
+    background: #fff;
+    color: #FFD700;
+}
+
+#maintenance-record-bus-tab:hover:not(.active) {
+    background: linear-gradient(135deg, #FFD700, #FF8C00);
+    color: #fff;
+}
+
+/* Fuel Record Tab Styling */
+#fuel-record-bus-tab {
+    background: linear-gradient(135deg, #FF8C00, #FF4500);
+    color: #fff;
+}
+
+#fuel-record-bus-tab:not(.active) {
+    background: #fff;
+    color: #FF8C00;
+}
+
+#fuel-record-bus-tab:hover:not(.active) {
+    background: linear-gradient(135deg, #FF8C00, #FF4500);
+    color: #fff;
+}
+
+/* Service History Tab Styling */
+#service-history-bus-tab {
+    background: linear-gradient(135deg, #DC143C, #FF6347);
+    color: #fff;
+}
+
+#service-history-bus-tab:not(.active) {
+    background: #fff;
+    color: #DC143C;
+}
+
+#service-history-bus-tab:hover:not(.active) {
+    background: linear-gradient(135deg, #DC143C, #FF6347);
+    color: #fff;
+}
+
+.tab-icon {
+    margin-right: 8px;
+    font-size: 1.1em;
+    transition: transform 0.3s ease;
+}
+
+.nav-link:hover .tab-icon {
+    transform: rotate(15deg) scale(1.1);
+}
+
+.nav-link.active .tab-icon {
+    animation: bounce 0.5s ease infinite alternate;
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-2px);
+    }
+}
+
+.tab-content {
+    padding: 20px;
+    margin-top: 15px;
+    background: #fff;
+    border-radius: 12px;
+    min-height: 200px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+
+.tab-pane {
+    opacity: 0;
+    transform: translateY(15px);
+    transition: all 0.4s ease-out;
+}
+
+.tab-pane.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Glowing effect on active tab */
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%;
+    height: 3px;
+    background: inherit;
+    border-radius: 6px;
+    filter: blur(2px);
+    animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        opacity: 0.6;
+        width: 40%;
+    }
+
+    to {
+        opacity: 1;
+        width: 55%;
+    }
+}
